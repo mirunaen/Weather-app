@@ -7,14 +7,23 @@ import Weather from "../src/app_component/weather.component";
 const API_key = "aae9fd5817293a02b244f3ba2b6456ca";
 
 class App extends React.Comment {
+  constructor(){
+    super();
+    this.state= {};
+  }
   state = {};
+  render() {
+    return (
+      <div className="App">
+      <Weather />
+    </div>
+    )
+  }
 }
 
 function App() {
   return (
-    <div className="App">
-      <Weather />
-    </div>
+    
   );
 }
 
