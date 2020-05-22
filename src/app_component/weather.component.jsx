@@ -6,6 +6,7 @@ const Weather = () => {
       <div className="cards">
         <h1>Spain</h1>
         <h5 className="py-4"></h5>
+        <i className="wi wi-day-sunny"></i>
       </div>
     </div>
   );
