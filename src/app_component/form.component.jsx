@@ -34,4 +34,10 @@ const Form = (props) => {
   );
 };
 
+function error() {
+  return (
+    <div className="alert alert-danger mx-5">Please enter City and Country</div>
+  );
+}
+
 export default Form;
