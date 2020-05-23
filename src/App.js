@@ -23,6 +23,10 @@ class App extends React.Component {
     this.getWeather();
   }
 
+  calCelsius(temp) {
+    let cell = temp - 273.15;
+    return cell;
+  }
   getWeather = async () => {
     const api_call = await fetch(
       `http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=${API_key}`
@@ -30,7 +34,14 @@ class App extends React.Component {
     const response = await api_call.json();
     console.log(response);
 
-    this.setState({ city: response.name, country: response.sys.country });
+    this.setState({
+      city: response.name,
+      country: response.sys.country,
+      celsius: response.main.temp,
+      temp_max: response.main.temp_max,
+      temp_min: response.main.temp_min,
+      description: response.Weather[0].description,
+    });
   };
   render() {
     return (
