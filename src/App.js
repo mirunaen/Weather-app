@@ -21,7 +21,7 @@ class App extends React.Component {
       description: "",
       error: false,
     };
-    this.getWeather();
+
     this.weatherIcon = {
       Thunderstorm: "wi-thunderstorm",
       Drizzle: "wi-sleet",
@@ -85,7 +85,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Form />
+        <Form loadweather={this.getWeather} />
         <Weather
           city={this.state.city}
           country={this.state.country}
