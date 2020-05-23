@@ -37,9 +37,9 @@ class App extends React.Component {
     return cell;
   }
 
-  get_WeatherIcons(icons, rangeID) {
+  get_WeatherIcon(icons, rangeID) {
     switch (true) {
-      case rangeId >= 200 && rangeID <= 232:
+      case rangeID >= 200 && rangeID <= 232:
         this.setState({ icon: this.weatherIcon.Thunderstorm });
         break;
       case rangeID >= 300 && rangeID <= 321:
@@ -79,7 +79,7 @@ class App extends React.Component {
       temp_min: this.calCelsius(response.main.temp_min),
       description: response.weather[0].description,
     });
-    this.get_WeatherIcons(this.weatherIcon, response.weather[0].id);
+    this.get_WeatherIcon(this.weatherIcon, response.weather[0].id);
   };
   render() {
     return (
