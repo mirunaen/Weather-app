@@ -17,18 +17,12 @@ const Form = (props) => {
           <input
             type="text"
             className="form-control"
-            name="city"
+            name="country"
             autoComplete="off"
           />
         </div>
         <div className="col-md-3">
-          {" "}
-          <input
-            type="text"
-            className="form-control"
-            name="city"
-            autoComplete="off"
-          />
+          <button className="btn btn-warning">Get Weather</button>
         </div>
       </div>
     </div>
