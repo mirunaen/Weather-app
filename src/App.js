@@ -6,7 +6,7 @@ import Weather from "../src/app_component/weather.component";
 //api call api.openweathermap.org/data/2.5/weather?q=London,uk
 const API_key = "aae9fd5817293a02b244f3ba2b6456ca";
 
-class App extends React.Comment {
+class App extends React.Component {
   constructor() {
     super();
     this.state = {};
