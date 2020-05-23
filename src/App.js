@@ -15,6 +15,10 @@ class App extends React.Component {
       icon: undefined,
       main: undefined,
       celsius: undefined,
+      temp_max: undefined,
+      temp_min: undefined,
+      description: "",
+      error: false,
     };
     this.getWeather();
   }
