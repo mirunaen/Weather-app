@@ -12,6 +12,9 @@ class App extends React.Component {
     this.state = {
       city: undefined,
       country: undefined,
+      icon: undefined,
+      main: undefined,
+      celsius: undefined,
     };
     this.getWeather();
   }
@@ -23,7 +26,7 @@ class App extends React.Component {
     const response = await api_call.json();
     console.log(response);
 
-    this.setState({ city: response.name });
+    this.setState({ city: response.name, country: response.sys.country });
   };
   render() {
     return (
